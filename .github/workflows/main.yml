@@ -48,7 +48,7 @@ jobs:
           run: mvn -B package --file pom.xml -DskipTests
           
         - name: 4. Copy .jar files
-          run: mkdir staging && cp target/*jar-with-dependencies.jar staging
+          run: mkdir staging && cp target/*.jar staging
           
         - name: 5. Upload artifact
           uses: actions/upload-artifact@v2
